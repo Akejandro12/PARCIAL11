@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <script src="./funcion.js"></script>
+    <title>Registro</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Inicio</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="./index.html">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./vehiculos.html">Vehículos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./testDrive.html">Test Drive</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./sobreNosotros.html">Sobre nosotros</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="register-container">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="card mt-3">
+                        <form onsubmit="handleSubmit(event)">
+                            <h2 class="form-title text-center">Ingrese los datos para agendar el test drive</h2>
+                            
+                            <div class="row mb-3">
+                                <div class="col-md-6">
+                                    <label for="name" class="form-label">Nombre</label>
+                                    <input type="text" class="form-control" id="name" placeholder="Ingrese su nombre" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="surname" class="form-label">Apellidos</label>
+                                    <input type="text" class="form-control" id="surname" placeholder="Ingrese sus apellidos" required>
+                                </div>
+                            </div>
+                            <div class="row mb-3">
+                                <div class="col-md-6">
+                                    <label for="email" class="form-label">Email</label>
+                                    <input type="email" class="form-control" id="email" placeholder="Ingrese su email" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="phone" class="form-label">Teléfono</label>
+                                    <input type="tel" class="form-control" id="phone" placeholder="Ingrese su teléfono" required pattern="[0-9]{10}">
+                                </div>
+                            </div>
+                            <div class="row mb-3">
+                                <div class="col-md-4">
+                                    <label for="estrato" class="form-label">Estrato (solo números)</label>
+                                    <input type="number" class="form-control" id="estrato" placeholder="Ingrese su estrato" required min="1">
+                                </div>
+                                <div class="col-md-4">
+                                    <label for="dob" class="form-label">Fecha de nacimiento</label>
+                                    <input type="date" class="form-control" id="dob" required>
+                                </div>
+                                <div class="col-md-4">
+                                    <label for="blood-group" class="form-label">Grupo Sanguíneo</label>
+                                    <select class="form-select" id="blood-group" required>
+                                        <option value="">Seleccione...</option>
+                                        <option value="A+">A+</option>
+                                        <option value="A-">A-</option>
+                                        <option value="B+">B+</option>
+                                        <option value="B-">B-</option>
+                                        <option value="O+">O+</option>
+                                        <option value="O-">O-</option>
+                                        <option value="AB+">AB+</option>
+                                        <option value="AB-">AB-</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row mb-3">
+                                <div class="col-md-3">
+                                    <label class="form-label">Género</label>
+                                    <div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="gender" id="male" value="masculino" required>
+                                            <label class="form-check-label" for="male">
+                                                Masculino
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="gender" id="female" value="femenino" required>
+                                            <label class="form-check-label" for="female">
+                                                Femenino
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <label class="form-label">Actividades favoritas</label>
+                                    <div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="football" value="futbol">
+                                            <label class="form-check-label" for="football">
+                                                Fútbol
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="basketball" value="baloncesto">
+                                            <label class="form-check-label" for="basketball">
+                                                Baloncesto
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="volleyball" value="voleibol">
+                                            <label class="form-check-label" for="volleyball">
+                                                Voleibol
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="cycling" value="ciclismo">
+                                            <label class="form-check-label" for="cycling">
+                                                Ciclismo
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <label for="appointment-date" class="form-label">Fecha de Solicitud</label>
+                                    <input type="date" class="form-control" id="appointment-date" required>
+                                </div>
+                                <div class="col-md-3">
+                                    <label for="appointment-time" class="form-label">Hora de Solicitud</label>
+                                    <input type="time" class="form-control" id="appointment-time" required>
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-center mt-3">
+                                <button type="submit" class="btn btn-primary me-2">Agendar</button>
+                                <button type="button" class="btn btn-danger" onclick="handleCancel()">Cancelar</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="./funcion.js"></script>
+</body>
+</html>

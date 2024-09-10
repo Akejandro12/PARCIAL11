@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú Inicio - Concesionario</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    <script src="./funcion.js"></script>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Inicio</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="./index.html">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./vehiculos.html">Vehículos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./testDrive.html">Test Drive</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./sobreNosotros.html">Sobre nosotros</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div id="vehicleCarousel" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#vehicleCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#vehicleCarousel" data-slide-to="1"></li>
+            <li data-target="#vehicleCarousel" data-slide-to="2"></li>
+            <li data-target="#vehicleCarousel" data-slide-to="3"></li>
+            <li data-target="#vehicleCarousel" data-slide-to="4"></li>
+        </ol>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="./multimedia/auto1.png" class="d-block w-100" alt="Vehículo 1">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Vehículo 1</h5>
+                    <p>Descripción breve del vehículo 1. Ideal para aventuras en familia.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="./multimedia/auto2.png" class="d-block w-100" alt="Vehículo 2">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Vehículo 2</h5>
+                    <p>Descripción breve del vehículo 2. Potente y eficiente en combustible.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="./multimedia/auto3.png" class="d-block w-100" alt="Vehículo 3">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Vehículo 3</h5>
+                    <p>Descripción breve del vehículo 3. Perfecto para viajes largos.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="./multimedia/auto4.png" class="d-block w-100" alt="Vehículo 4">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Vehículo 4</h5>
+                    <p>Descripción breve del vehículo 4. Con tecnología avanzada y comodidad.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="./multimedia/auto5.png" class="d-block w-100" alt="Vehículo 5">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Vehículo 5</h5>
+                    <p>Descripción breve del vehículo 5. Elegante y confiable.</p>
+                </div>
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#vehicleCarousel" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Anterior</span>
+        </a>
+        <a class="carousel-control-next" href="#vehicleCarousel" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Siguiente</span>
+        </a>
+    </div>
+
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-6">
+                <h2>Sedes</h2>
+                <div class="form-group">
+                    <label for="sedeSelect">Selecciona una sede:</label>
+                    <select class="form-control" id="sedeSelect">
+                        <option value="">Selecciona...</option>
+                        <option value="sede1" data-description="Ubicación céntrica y bien comunicada">Sede 1</option>
+                        <option value="sede2" data-description="Sede con amplio horario de atención">Sede 2</option>
+                        <option value="sede3" data-description="Oficina con soporte técnico especializado">Sede 3</option>
+                    </select>
+                </div>
+                <div id="sedeInfo">
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="map-container mb-4">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3763.875274837799!2d-99.16212768528753!3d19.432607586731006!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1fbcf89c60a4f%3A0x2a8aa7f2f8d5f7f!2sPalacio+de+Bellas+Artes!5e0!3m2!1ses-419!2smx!4v1632819721263!5m2!1ses-419!2smx" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="./funcion.js"></script>
+</body>
+</html>

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vehículos - Concesionario</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <script src="./funcion.js"></script>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Inicio</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="./index.html">Inicio</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="./vehiculos.html">Vehículos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./testDrive.html">Test Drive</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./sobreNosotros.html">Sobre nosotros</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container mt-5">
+        <div class="mb-4">
+            <input type="text" id="searchInput" class="form-control" placeholder="Buscar vehículos">
+        </div>
+        <h3>Vehículos Kia</h3>
+        <div class="row" id="kiaVehicles">
+            <div class="col-md-4 mb-4">
+                <div class="card" style="width: 18rem;">
+                    <img src="./multimedia/auto1.png" class="card-img-top" alt="Vehículo 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Kia Sportage</h5>
+                        <p class="card-text">SUV ideal para la familia con amplias características de confort.</p>
+                        <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#vehicleModal" data-vehicle='{"name":"Kia Sportage","model":"2023","engine":"2.4L","care":"Revisión cada 10,000 km","price":"$30,000"}'>Ver detalles</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card" style="width: 18rem;">
+                    <img src="./multimedia/auto2.png" class="card-img-top" alt="Vehículo 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Kia Seltos</h5>
+                        <p class="card-text">Compacto y ágil, perfecto para la ciudad con gran eficiencia.</p>
+                        <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#vehicleModal" data-vehicle='{"name":"Kia Seltos","model":"2023","engine":"1.6L","care":"Revisión cada 15,000 km","price":"$25,000"}'>Ver detalles</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card" style="width: 18rem;">
+                    <img src="./multimedia/auto3.png" class="card-img-top" alt="Vehículo 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Kia Rio</h5>
+                        <p class="card-text">Un sedán compacto con excelente rendimiento de combustible.</p>
+                        <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#vehicleModal" data-vehicle='{"name":"Kia Rio","model":"2023","engine":"1.6L","care":"Revisión cada 20,000 km","price":"$18,000"}'>Ver detalles</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <hr>
+
+        <h3>Vehículos Renault</h3>
+        <div class="row" id="renaultVehicles">
+            <div class="col-md-4 mb-4">
+                <div class="card" style="width: 18rem;">
+                    <img src="./multimedia/auto4.png" class="card-img-top" alt="Vehículo 4">
+                    <div class="card-body">
+                        <h5 class="card-title">Renault Koleos</h5>
+                        <p class="card-text">SUV con tecnología avanzada y mucho espacio.</p>
+                        <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#vehicleModal" data-vehicle='{"name":"Renault Koleos","model":"2023","engine":"2.5L","care":"Revisión cada 12,000 km","price":"$35,000"}'>Ver detalles</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card" style="width: 18rem;">
+                    <img src="./multimedia/auto5.png" class="card-img-top" alt="Vehículo 5">
+                    <div class="card-body">
+                        <h5 class="card-title">Renault Duster</h5>
+                        <p class="card-text">Robusto y confiable, ideal para terrenos difíciles.</p>
+                        <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#vehicleModal" data-vehicle='{"name":"Renault Duster","model":"2023","engine":"2.0L","care":"Revisión cada 15,000 km","price":"$28,000"}'>Ver detalles</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card" style="width: 18rem;">
+                    <img src="./multimedia/auto6.png" class="card-img-top" alt="Vehículo 6">
+                    <div class="card-body">
+                        <h5 class="card-title">Renault Clio</h5>
+                        <p class="card-text">Un hatchback compacto, ideal para la ciudad.</p>
+                        <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#vehicleModal" data-vehicle='{"name":"Renault Clio","model":"2023","engine":"1.2L","care":"Revisión cada 25,000 km","price":"$22,000"}'>Ver detalles</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="vehicleModal" tabindex="-1" role="dialog" aria-labelledby="vehicleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="vehicleModalLabel">Detalles del Vehículo</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p id="modalName"></p>
+                    <p id="modalModel"></p>
+                    <p id="modalEngine"></p>
+                    <p id="modalCare"></p>
+                    <p id="modalPrice"></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="funcion.js"></script>
+</body>
+</html>
